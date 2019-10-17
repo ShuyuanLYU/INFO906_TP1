@@ -7,10 +7,7 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="navbar">
-        <a href="/ColisWeb/"><button>Ajouter un colis</button></a>
-        <a href="/ColisWeb/DisplayAllColisServlet"><button>Visualiser les colis</button></a>
-    </div>
+    <%@include file="nav_bar.jsp" %>
 
     <div class="container">
         <h1>Gestion des colis</h1>
