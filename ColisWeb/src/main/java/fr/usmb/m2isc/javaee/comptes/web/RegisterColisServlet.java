@@ -51,8 +51,6 @@ public class RegisterColisServlet extends HttpServlet{
 
             request.setAttribute("colis", colis);
 
-            //response.getWriter().println("C'est fait");
-
             request.getRequestDispatcher("/DisplayColis.jsp").forward(request, response);
 
     }

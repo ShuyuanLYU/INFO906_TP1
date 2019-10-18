@@ -48,13 +48,26 @@ public class EditColisServlet extends HttpServlet{
         double longitude = Double.parseDouble(longitudeParameter);
         double latatitude = Double.parseDouble(latitudeParameter);
 
-        Colis colis = op.editColis(identifiant,latatitude,longitude,emplacement, ColisState.valueOf(stateParameter));
+        Colis colis = op.getColis(identifiant);
 
-        request.setAttribute("colis", colis);
+
+
+        if(colis != null){
+            colis = op.editColis(identifiant,latatitude,longitude,emplacement, ColisState.valueOf(stateParameter));
+            request.setAttribute("colis", colis);
+            request.getRequestDispatcher("/DisplayColis.jsp").forward(request, response);
+        }
+        else{
+            System.out.println("Colis existe pas !!");
+            request.setAttribute("error", "L'identifiant de colis que vous avez saisez n'est pas correct !");
+            request.getRequestDispatcher("/Error.jsp").forward(request, response);
+        }
+
+
 
         //response.getWriter().println("C'est fait");
 
-        request.getRequestDispatcher("/DisplayColis.jsp").forward(request, response);
+
     }
 
     /**
