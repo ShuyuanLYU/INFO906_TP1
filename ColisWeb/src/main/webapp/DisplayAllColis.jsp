@@ -11,7 +11,7 @@
     <%@include file="nav_bar.jsp" %>
 
     <div class="container">
-        <h1>Gestion des colis</h1>
+        <h1 class="mt-3 mb-3">Gestion des colis</h1>
 
         <table class="table">
             <thead>
@@ -36,6 +36,12 @@
 
             </tbody>
         </table>
+
+        <c:if test="${listColis.size() == 0}">
+        <div class="alert alert-warning" role="alert">
+            Aucun colis n'a été créé !
+        </div>
+        </c:if>
     </div>
 </body>
 </html>
