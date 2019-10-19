@@ -1,4 +1,4 @@
-package fr.usmb.m2isc.javaee.comptes;
+package fr.usmb.m2isc.javaee.colis;
 
 public enum ColisState {
     REGISTERED,

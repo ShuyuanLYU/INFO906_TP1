@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: shuyuan
-  Date: 2019-10-17
-  Time: 14:47
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+
 <html>
 <head>
     <title>Error</title>
@@ -17,9 +11,9 @@
 
     <div class="container mt-3 mb-3">
         <div class="alert alert-danger" role="alert">
-            ${error }
+            ${ error }
         </div>
-        <a type="button" class="btn btn-primary" href="/ColisWeb/DisplayAllColisServlet">Visualiser les colis</a>
+        <a type="button" class="btn btn-primary" href="DisplayAllColisServlet">Visualiser les colis</a>
     </div>
 
 

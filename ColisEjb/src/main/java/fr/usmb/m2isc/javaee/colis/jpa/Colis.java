@@ -1,6 +1,6 @@
-package fr.usmb.m2isc.javaee.comptes.jpa;
+package fr.usmb.m2isc.javaee.colis.jpa;
 
-import fr.usmb.m2isc.javaee.comptes.ColisState;
+import fr.usmb.m2isc.javaee.colis.ColisState;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,16 +9,15 @@ import javax.persistence.NamedQuery;
 import java.io.Serializable;
 
 @NamedQueries({
-        @NamedQuery(name="allColis", query="SELECT c FROM Colis c"),
-        @NamedQuery(name="findWithNum", query="SELECT c FROM Compte c WHERE c.numero LIKE :partialNum ORDER BY c.numero ASC")
+        @NamedQuery(name="allColis", query="SELECT c FROM Colis c")
 })
 @Entity
 public class Colis implements Serializable {
 
+    private static final long serialVersionUID = 1434153494900958184L;
     @Id
     private String identifiant;
-    private double poid;
-    private String name;
+    private double poids;
     private String origin;
     private String destination;
 
@@ -28,15 +27,13 @@ public class Colis implements Serializable {
     private ColisState state;
 
     public Colis() {
-
     }
 
 
-    public Colis(String identifiant, double poid, String name, String origin, String destination, double lat, double lng) {
+    public Colis(String identifiant, double poids, String origin, String destination, double lat, double lng) {
         super();
         this.identifiant = identifiant;
-        this.poid = poid;
-        this.name = name;
+        this.poids = poids;
         this.origin = origin;
         this.destination = destination;
         this.state = ColisState.REGISTERED;
@@ -52,20 +49,12 @@ public class Colis implements Serializable {
         this.identifiant = identifiant;
     }
 
-    public double getPoid() {
-        return poid;
+    public double getPoids() {
+        return poids;
     }
 
-    public void setPoid(double poid) {
-        this.poid = poid;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setPoids(double poids) {
+        this.poids = poids;
     }
 
     public String getOrigin() {

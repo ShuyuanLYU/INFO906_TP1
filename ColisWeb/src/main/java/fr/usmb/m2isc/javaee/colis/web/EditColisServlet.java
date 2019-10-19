@@ -1,4 +1,4 @@
-package fr.usmb.m2isc.javaee.comptes.web;
+package fr.usmb.m2isc.javaee.colis.web;
 
 
 import java.io.IOException;
@@ -10,10 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.usmb.m2isc.javaee.comptes.ColisState;
-import fr.usmb.m2isc.javaee.comptes.ejb.Operation;
-import fr.usmb.m2isc.javaee.comptes.jpa.Colis;
-import fr.usmb.m2isc.javaee.comptes.jpa.Compte;
+import fr.usmb.m2isc.javaee.colis.ColisState;
+import fr.usmb.m2isc.javaee.colis.ejb.Operation;
+import fr.usmb.m2isc.javaee.colis.jpa.Colis;
 
 /**
  * Servlet utilisee pour change la position et l'état d'un colis.
@@ -21,7 +20,7 @@ import fr.usmb.m2isc.javaee.comptes.jpa.Compte;
 @WebServlet("/EditColisServlet")
 public class EditColisServlet extends HttpServlet{
 
-    private static final long serialVersionUID = 5236668439173484090L;
+    private static final long serialVersionUID = -4831125265668339656L;
     @EJB
     private Operation op;
 
@@ -62,12 +61,6 @@ public class EditColisServlet extends HttpServlet{
             request.setAttribute("error", "L'identifiant de colis que vous avez saisez n'est pas correct !");
             request.getRequestDispatcher("/Error.jsp").forward(request, response);
         }
-
-
-
-        //response.getWriter().println("C'est fait");
-
-
     }
 
     /**
@@ -77,6 +70,5 @@ public class EditColisServlet extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
-
 }
 

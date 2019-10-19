@@ -20,9 +20,6 @@ rootProject.name = 'ExempleCpts'
 include ':ColisEjb'
 include ':ColisWeb'
 include ':ColisEar'
-//include ':CompteEjb'
-//include ':CompteWeb'
-//include ':CompteEar'
 
 project(':ColisEjb').projectDir = "$rootDir/ColisEjb" as File
 project(':ColisWeb').projectDir = "$rootDir/ColisWeb" as File

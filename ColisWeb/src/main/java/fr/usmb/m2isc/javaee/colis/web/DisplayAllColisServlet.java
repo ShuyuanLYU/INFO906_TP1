@@ -1,7 +1,7 @@
-package fr.usmb.m2isc.javaee.comptes.web;
+package fr.usmb.m2isc.javaee.colis.web;
 
-import fr.usmb.m2isc.javaee.comptes.ejb.Operation;
-import fr.usmb.m2isc.javaee.comptes.jpa.Colis;
+import fr.usmb.m2isc.javaee.colis.ejb.Operation;
+import fr.usmb.m2isc.javaee.colis.jpa.Colis;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -13,12 +13,12 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Servlet utilisee pour afficher tous les colis.
+ * Servlet utilisé pour afficher tous les colis.
  */
 @WebServlet("/DisplayAllColisServlet")
 public class DisplayAllColisServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
 
+    private static final long serialVersionUID = -8627686923668875954L;
     @EJB
     private Operation ejb;
 
@@ -40,12 +40,4 @@ public class DisplayAllColisServlet extends HttpServlet {
 
         request.getRequestDispatcher("/DisplayAllColis.jsp").forward(request, response);
     }
-
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-     */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
-
 }

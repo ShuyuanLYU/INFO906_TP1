@@ -1,41 +1,39 @@
-# Un exemple minimaliste d'une application JavaEE 7
+# TP1 Déploiement d'applications
 
-Pour faire simple l'application consiste à gérer l'acheminement de colis par une importante société dans le transport (très simplifiés).
+Par LYU Shuyuan et OMNES Nathanaël
 
-
-On peut :
-- créer des colis
-- visualiser tous les colis
-- visualiser un colis
-- editer un colis
+Ce projet a été réalisé pour montrer nos connaissances dans l'utilisation d'une application web java et d'EJB.
 
 
-## Getting started
-### Démarrer la BDD Glassfish 
-Dans le dossier où se trouve Glassfish
+Vous pouvez :
+- Créer des colis
+- Visualiser tous les colis créés
+- Visualiser un seul colis
+- Éditer un colis
+
+
+## Pour Lancer le projet
+
+### Démarrer la base de données Glassfish 
+Dans le dossier où se trouve votre serveur Glassfish, exécutez l'une des commandes suivantes :
 
 - Windows
 ```bash
 > bin\asadmin.bat start-database
 ```
+- Linux / Mac dans un terminal
+```
+> ./bin/asadmin start-database
+```
+
 ### Démarrer glassfish avec le bon artéfact
 Utiliser l'artéfact `ColisEar.ear`
 
 
-## Usage :
-Ce projet est un fork de `exemplescomptes` donc il fonctionne de la même manière
-
 ## Documentation :
-
-JavaEE 7
-- Doc : http://docs.oracle.com/javaee/7
-- Tutoriel : https://docs.oracle.com/javaee/7/tutorial
-- API (javadoc) : http://docs.oracle.com/javaee/7/api
-- Spécifications : https://www.oracle.com/technetwork/java/javaee/tech/index-jsp-142185.html
 
 JaveEE 8
 - Doc : https://javaee.github.io/glassfish/documentation
 - Tutoriel : https://javaee.github.io/tutorial/
 - API (javadodc : https://javaee.github.io/javaee-spec/javadocs/
 - Spécifications : https://www.oracle.com/technetwork/java/javaee/tech/java-ee-8-3890673.html
-

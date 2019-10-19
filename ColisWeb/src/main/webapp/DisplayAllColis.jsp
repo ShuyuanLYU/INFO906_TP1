@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <html>
@@ -12,39 +12,26 @@
 
     <div class="container">
         <h1>Gestion des colis</h1>
-        <%--<div>
-            <h2>Affichage des colis</h2>
 
-            <c:forEach var="colis"  items="${listColis}" >
-                <div>
-                    <p>identifiant : ${colis.identifiant }</p>
-                    <p>name : ${colis.name }</p>
-                    <a type="button" class="btn btn-primary" href="/ColisWeb/DisplayColisServlet?identifiant=${colis.identifiant}">Visualiser</a>
-                </div>
-
-            </c:forEach>
-        </div>--%>
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">identifiant</th>
-                <th scope="col">name</th>
-                <th scope="col">origine</th>
-                <th scope="col">destination</th>
-                <th scope="col">state</th>
-                <th scope="col">action</th>
+                <th scope="col">Identifiant</th>
+                <th scope="col">Origine</th>
+                <th scope="col">Destination</th>
+                <th scope="col">État</th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="colis"  items="${listColis}" >
-            <tr>
-                <td>${colis.identifiant }</td>
-                <td>${colis.name }</td>
-                <td>${colis.origin }</td>
-                <td>${colis.destination }</td>
-                <td>${colis.state }</td>
-                <td><a href="/ColisWeb/DisplayColisServlet?identifiant=${colis.identifiant}">Visualiser</a></td>
-            </tr>
+            <c:forEach var="colis"  items="${ listColis }" >
+                <tr>
+                    <td>${ colis.identifiant }</td>
+                    <td>${ colis.origin }</td>
+                    <td>${ colis.destination }</td>
+                    <td>${ colis.state }</td>
+                    <td><a href="DisplayColisServlet?identifiant=${ colis.identifiant }">Visualiser</a></td>
+                </tr>
             </c:forEach>
 
             </tbody>

@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+
 <html>
 <head>
     <title>Suivi du colis</title>
@@ -15,39 +16,38 @@
 
         <h2 class="mt-3 mb-3">Informations colis :</h2>
 
-        <p>identifiant : ${colis.identifiant }</p>
-        <p>name : ${colis.name }</p>
-        <p>poid : ${colis.poid } </p>
-        <p>origine : ${colis.origin } </p>
-        <p>destination : ${colis.destination } </p>
-        <p>state : ${colis.state } </p>
-        <p>latitude : ${colis.latitude } </p>
-        <p>longitude : ${colis.longitude } </p>
-        <p>emplacement : ${colis.emplacement } </p>
+        <p>Identifiant : ${ colis.identifiant }</p>
+        <p>Poids : ${ colis.poids }</p>
+        <p>Origine : ${ colis.origin }</p>
+        <p>Destination : ${ colis.destination }</p>
+        <p>État : ${ colis.state }</p>
+        <p>Latitude : ${ colis.latitude }</p>
+        <p>Longitude : ${ colis.longitude }</p>
+        <p>Emplacement : ${ colis.emplacement }</p>
 
         <p>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#form-editer" aria-expanded="false" aria-controls="collapseExample">
-                Editer
+                Éditer
             </button>
         </p>
         <div class="collapse" id="form-editer">
-            <h1 class="mt-3">Editer un nouveau colis :</h1>
+            <h1 class="mt-3">Éditer un nouveau colis :</h1>
 
-            <form action="EditColisServlet">
+            <form action="EditColisServlet" method="post">
 
                 <div class="form-row">
 
-                    <input type="hidden" class="form-control" name="identifiant" placeholder="Identifiant" value=${colis.identifiant }>
+                    <input type="hidden" class="form-control" name="identifiant" placeholder="Identifiant" value=${ colis.identifiant }>
 
                     <label class="col-md-12">Localisation</label>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" id="cityPosition" name="localisation" placeholder="Ville" value=${colis.origin }>
+                        <input type="text" class="form-control" id="cityPosition" name="localisation" placeholder="Ville" value=${ colis.origin }>
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" id="latPos" name="lat" placeholder="lat" value=${colis.latitude }>
+                        <input type="text" class="form-control" id="latPos" name="lat" placeholder="lat" value=${ colis.latitude }>
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="text" class="form-control" id="lngPos" name="lng" placeholder="lng" value=${colis.longitude }>
+                        <input type="text" class="form-control" id="lngPos" name="lng" placeholder="lng" value=${ colis.longitude }>
                     </div>
                 </div>
 
