@@ -29,6 +29,9 @@ Dans le dossier où se trouve votre serveur Glassfish, exécutez l'une des comma
 ### Démarrer glassfish avec le bon artéfact
 Utiliser l'artéfact `ColisEar.ear`
 
+puis connectez vous à la bonne URL, par exemple:
+
+http://localhost:8080/ColisWeb/
 
 ## Documentation :
 

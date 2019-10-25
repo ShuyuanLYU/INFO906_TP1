@@ -23,24 +23,24 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label>Identifiant</label>
-                    <input type="text" class="form-control" required name="identifiant" placeholder="Identifiant" value="Bob">
+                    <input type="text" class="form-control" required name="identifiant" placeholder="Identifiant">
                 </div>
                 <div class="form-group col-md-4">
                     <label>Poids</label>
-                    <input type="number" class="form-control" required name="poids" placeholder="Poids" value="123">
+                    <input type="number" class="form-control" required name="poids" placeholder="Poids">
                 </div>
             </div>
 
             <div class="form-row">
                 <label class="col-md-12">Lieu de départ</label>
                 <div class="form-group col-md-3">
-                    <input type="text" class="form-control" required name="origin" placeholder="origin" value="Chambery">
+                    <input type="text" class="form-control" required name="origin" placeholder="origin">
                 </div>
                 <div class="form-group col-md-3">
-                    <input type="text" class="form-control" required name="lat" placeholder="lat" value="100">
+                    <input type="text" class="form-control" required name="lat" placeholder="lat">
                 </div>
                 <div class="form-group col-md-3">
-                    <input type="text" class="form-control" required name="lng" placeholder="lng" value="200">
+                    <input type="text" class="form-control" required name="lng" placeholder="lng">
                 </div>
             </div>
 
@@ -48,7 +48,7 @@
                 <label class="col-md-12">Lieu d'arrivé</label>
 
                 <div class="form-group">
-                    <input type="text" class="form-control" id="stop" required name="destination" placeholder="destination" value="Paris">
+                    <input type="text" class="form-control" id="stop" required name="destination" placeholder="destination">
                 </div>
             </div>
 
