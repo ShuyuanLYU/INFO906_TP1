@@ -2,7 +2,7 @@
 
 Par LYU Shuyuan et OMNES Nathanaël
 
-Ce projet a été réalisé pour montrer nos connaissances dans l'utilisation d'une application web java et d'EJB.
+Ce projet a été réalisé pour montrer nos connaissances dans l'utilisation d'une application web java, d'EJB et persistence.
 
 
 Vous pouvez :

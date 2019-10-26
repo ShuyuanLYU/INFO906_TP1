@@ -34,21 +34,22 @@
             <div class="form-row">
                 <label class="col-md-12">Lieu de départ</label>
                 <div class="form-group col-md-3">
-                    <input type="text" class="form-control" required name="origin" placeholder="origin">
+                    <input type="text" class="form-control" required name="origin" placeholder="Origine">
                 </div>
                 <div class="form-group col-md-3">
-                    <input type="text" class="form-control" required name="lat" placeholder="lat">
+                    <input type="text" class="form-control" required name="lat" placeholder="Latitude">
                 </div>
                 <div class="form-group col-md-3">
-                    <input type="text" class="form-control" required name="lng" placeholder="lng">
+                    <input type="text" class="form-control" required name="lng" placeholder="Longitude">
                 </div>
             </div>
 
             <div class="form-row">
-                <label class="col-md-12">Lieu d'arrivé</label>
+                <label class="col-md-12">Lieu d'arrivée</label>
 
                 <div class="form-group">
-                    <input type="text" class="form-control" id="stop" required name="destination" placeholder="destination">
+                    <input type="text" class="form-control" id="stop" required name="destination"
+                           placeholder="Destination">
                 </div>
             </div>
 

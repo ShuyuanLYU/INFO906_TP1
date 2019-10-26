@@ -35,6 +35,7 @@ public class Colis implements Serializable {
         this.identifiant = identifiant;
         this.poids = poids;
         this.origin = origin;
+        this.emplacement = origin;
         this.destination = destination;
         this.state = ColisState.REGISTERED;
         this.latitude = lat;
